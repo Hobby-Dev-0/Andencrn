@@ -29,7 +29,7 @@ from Andencento.modules.connection import connect_button
 PM_START_TEXT = """
 _Hello_ *{}*
 _My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
-_Maintained by_ [{}](@Andencento)
+_Maintained by_ [Team Andencento](https://telegram.me/Andencento)
 """
 
 
