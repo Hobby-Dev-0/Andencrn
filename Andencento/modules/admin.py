@@ -37,7 +37,7 @@ def gitpull(bot: Bot, update: Update):
     
     sent_msg.edit_text("Restarted.")
     
-    os.system('pkill python && python3 -m Andencento')
+    os.system('restart.bat')
     os.execv('start.bat', sys.argv)
 
 
