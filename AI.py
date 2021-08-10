@@ -48,8 +48,8 @@ async def type_and_send(message):
 @Andencento.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message):
     await message.reply_text(
-        "[GitHub](https://github.com/thehamkercat/AndencentoChatBot)"
-        + " | [Group](t.me/PatheticProgrammers)",
+        "[GitHub](https://github.com/InternetAmethyst/Andencrn)"
+        + " | [Group](t.me/AndencentoSupport)",
         disable_web_page_preview=True,
     )
 
