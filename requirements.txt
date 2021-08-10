@@ -48,3 +48,6 @@ youtube-search-python
 ffmpeg
 git+https://github.com/InternetAmethyst/python-markdown2.git
 apscheduler
+pyrogram
+python-arq
+TgCrypto
