@@ -10,7 +10,7 @@ heroku3
 coffeehouse
 python-telegram-bot==11.1.0
 numpy
-git
+gitpython==3.1.11
 urbandict
 pyowm
 wikipedia
