@@ -2,7 +2,7 @@
 import asyncio
 import sys
 from os import environ, execle, path, remove
-
+import os
 import heroku3
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
