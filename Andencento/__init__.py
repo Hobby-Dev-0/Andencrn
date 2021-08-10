@@ -7,7 +7,7 @@ import spamwatch
 StartTime = time.time()
 from telethon import TelegramClient
 
-VERSION = "6.0"
+VERSION = "0.1"
 # enable logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
