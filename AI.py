@@ -6,7 +6,7 @@ from aiohttp import ClientSession
 from pyrogram import Client, filters, idle
 from Python_ARQ import ARQ
 
-from config import ARQ_API_BASE_URL, ARQ_API_KEY, LANGUAGE, bot_token
+from AIconfig import ARQ_API_BASE_URL, ARQ_API_KEY, LANGUAGE, bot_token
 
 luna = Client(
     ":memory:",
