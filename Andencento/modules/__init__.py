@@ -1,5 +1,5 @@
 from Andencento import LOAD, NO_LOAD, LOGGER
-
+#copyright Andencento
 
 def __list_all_modules():
     from os.path import dirname, basename, isfile
