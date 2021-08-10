@@ -1,5 +1,4 @@
 # Copyright The Hamercat And Team Andencento - 2021-2022
-import os
 import re
 from asyncio import gather, get_event_loop, sleep
 
@@ -7,9 +6,9 @@ from aiohttp import ClientSession
 from pyrogram import Client, filters, idle
 from Python_ARQ import ARQ
 
-from AIconfig import ARQ_API_BASE_URL, ARQ_API_KEY, LANGUAGE, bot_token
+from config import ARQ_API_BASE_URL, ARQ_API_KEY, LANGUAGE, bot_token
 
-Andencento = Client(
+luna = Client(
     ":memory:",
     bot_token=bot_token,
     api_id=6,
@@ -20,13 +19,13 @@ bot_id = int(bot_token.split(":")[0])
 arq = None
 
 
-async def AndencentoQuery(query: str, user_id: int):
+async def lunaQuery(query: str, user_id: int):
     query = (
         query
         if LANGUAGE == "en"
         else (await arq.translate(query, "en")).result.translatedText
     )
-    resp = (await arq.Andencento(query, user_id)).result
+    resp = (await arq.luna(query, user_id)).result
     return (
         resp
         if LANGUAGE == "en"
@@ -41,28 +40,28 @@ async def type_and_send(message):
     user_id = message.from_user.id if message.from_user else 0
     query = message.text.strip()
     await message._client.send_chat_action(chat_id, "typing")
-    response, _ = await gather(AndencentoQuery(query, user_id), sleep(2))
+    response, _ = await gather(lunaQuery(query, user_id), sleep(2))
     await message.reply_text(response)
     await message._client.send_chat_action(chat_id, "cancel")
 
 
-@Andencento.on_message(filters.command("repo") & ~filters.edited)
+@luna.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message):
     await message.reply_text(
         "[GitHub](https://github.com/InternetAmethyst/Andencrn)"
-        + " | [Group](t.me/AndencentoSupport)",
+        + " | [Group](t.me/Andencento)",
         disable_web_page_preview=True,
     )
 
 
-@Andencento.on_message(filters.command("help") & ~filters.edited)
+@luna.on_message(filters.command("help") & ~filters.edited)
 async def start(_, message):
-    await Andencento.send_chat_action(message.chat.id, "typing")
+    await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
     await message.reply_text("/repo - Get Repo Link")
 
 
-@Andencento.on_message(
+@luna.on_message(
     ~filters.private
     & filters.text
     & ~filters.command("help")
@@ -78,7 +77,7 @@ async def chat(_, message):
             return
     else:
         match = re.search(
-            "[.|\n]{0,}Andencento[.|\n]{0,}",
+            "[.|\n]{0,}luna[.|\n]{0,}",
             message.text.strip(),
             flags=re.IGNORECASE,
         )
@@ -87,7 +86,7 @@ async def chat(_, message):
     await type_and_send(message)
 
 
-@Andencento.on_message(
+@luna.on_message(
     filters.private & ~filters.command("help") & ~filters.edited
 )
 async def chatpm(_, message):
@@ -101,12 +100,12 @@ async def main():
     session = ClientSession()
     arq = ARQ(ARQ_API_BASE_URL, ARQ_API_KEY, session)
 
-    await Andencento.start()
+    await luna.start()
     print(
         """
------------------
-| AI Started! |
------------------
+------------------------
+| Andencento AI Started! |
+------------------------
 """
     )
     await idle()
