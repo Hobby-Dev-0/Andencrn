@@ -188,3 +188,12 @@ async def upstream(ups):
         args = [sys.executable, "-m", "Andencento"]
         execle(sys.executable, *args, environ)
         return
+
+
+__help__ = """
+ ❍ /update
+**Note:** Night Mode chats get Automatically closed at 12pm(IST)
+and Automatically openned at 6am(IST) To Prevent Night Spams.
+"""
+
+__mod_name__ = "Updater"
