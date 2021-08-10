@@ -1,5 +1,5 @@
 import os
-bot_token = os.environ.get("TOKEN", None)
+bot_token = os.environ.get("AI_BOT_TOKEN", None)
 ARQ_API_KEY = os.environ.get("ARQ_API_KEY", None)
 
 # List of supported languages >>
