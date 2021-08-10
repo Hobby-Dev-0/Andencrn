@@ -1,3 +1,4 @@
+# Copyright The Hamercat And Team Andencento - 2021-2022
 import os
 import re
 from asyncio import gather, get_event_loop, sleep
