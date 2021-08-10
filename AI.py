@@ -1,9 +1,4 @@
 import os
-op = os.get.environ("AI_CHAT", None)
-if op == False or None:
-    return
-else:
-    pass
 import re
 from asyncio import gather, get_event_loop, sleep
 
