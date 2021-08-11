@@ -60,6 +60,9 @@ if ENV:
     URL = os.environ.get('URL', "")  # Does not contain token
     PORT = int(os.environ.get('PORT', 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
+    AI_API_KEY = os.environ.get('AI_API_KEY', None)
+    updater = tg.Updater(TOKEN, workers=WORKERS)
+    dispatcher = updater.dispatcher
 
     DB_URI = os.environ.get('DATABASE_URL')
     DONATION_LINK = os.environ.get('DONATION_LINK')
