@@ -59,6 +59,7 @@ if ENV:
     WEBHOOK = bool(os.environ.get('WEBHOOK', False))
     URL = os.environ.get('URL', "")  # Does not contain token
     PORT = int(os.environ.get('PORT', 5000))
+    WORKERS = int(os.environ.get('WORKERS', 8))
     CERT_PATH = os.environ.get("CERT_PATH")
     AI_API_KEY = os.environ.get('AI_API_KEY', None)
     updater = tg.Updater(TOKEN, workers=WORKERS)
