@@ -9,7 +9,7 @@ from telegram import Message, Chat, User, Update, Bot
 from telegram.ext import CommandHandler, MessageHandler, Filters, run_async
 
 from Andencento import dispatcher, AI_API_KEY, OWNER_ID
-import Andencento.modules.sql.chatbot_sql as sql
+import Andencento.modules.sql.lydia_sql as sql
 from Andencento.filters import CustomFilters
 
 
