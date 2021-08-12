@@ -1,2 +1,2 @@
-AMAN_PANDEY: python3 -m Andencento
-AI: python3 -m AI
+web: python3 -m Andencento
+web: python3 -m AI
