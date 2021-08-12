@@ -26,7 +26,6 @@ pynewtonmath
 spongemock
 zalgo-text
 geopy
-nltk
 psutil
 bleach
 aiohttp>=2.2.5
