@@ -1,19 +1,41 @@
-import io
 import logging
 import sys
-import os
+
 from contextlib import contextmanager, redirect_stdout
 
 from telegram import Bot, Update, ParseMode
 from telegram.ext import Updater, CommandHandler, run_async
-from telethon import TelegramClient
+
 from telegram.error import TimedOut, NetworkError
+
 from Andencento import dispatcher, LOGGER
 from Andencento.modules.disable import DisableAbleCommandHandler
 from Andencento.modules.helper_funcs.chat_status import bot_admin, can_promote, user_admin, can_pin, dev_plus
 
 from requests import get
 
+# Common imports for eval
+import sys
+import inspect
+import os
+import shutil
+import glob
+import math
+import textwrap
+import os
+import requests
+import json
+import gc
+import datetime
+import time
+import traceback
+import re
+import io
+import asyncio
+import random
+import subprocess
+import urllib
+import psutil
 
 namespaces = {}
 
