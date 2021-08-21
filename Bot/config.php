@@ -1,0 +1,10 @@
+  
+<?php
+/*
+
+*/
+$TG_BOT_TOKEN = $_ENV['AI_BOT_TOKEN'];
+$BOT_NAME = $_ENV['BOT_NAME'];
+$BOT_USERNAME = $_ENV['BOT_USERNAME'];
+
+?>
