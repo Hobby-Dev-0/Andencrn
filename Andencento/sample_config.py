@@ -23,7 +23,7 @@ class Config(object):
     MESSAGE_DUMP = None  # needed to make sure 'save from' messages persist
     GBAN_LOGS = None
     LOAD = []
-    NO_LOAD = ['translation', 'rss']
+    NO_LOAD = None
     WEBHOOK = False
     URL = None
 
